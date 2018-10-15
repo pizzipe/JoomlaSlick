@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+    <name>mod_genericcarousel</name>
+    <author>Piz</author>
+    <creationDate>April 2018</creationDate>
+    <!--
+    <copyright>Copyright (C) 2005 - 2015 Open Source Matters. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>info@outsmartit.be</authorEmail>
+    <authorUrl>www.outsmartit.be</authorUrl>
+    -->
+    <version>0.0.1</version>
+    <description>MOD_CAROUSEL_XML_DESCRIPTION</description>
+    <files>
+        <filename module="mod_genericcarousel">mod_genericcarousel.php</filename>
+        <folder>tmpl</folder>
+        <folder>assets</folder>
+        <filename>mod_genericcarousel.xml</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="language">
+        <language tag="en-GB">en-GB/en-GB.mod_genericcarousel.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_genericcarousel.sys.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.mod_genericcarousel.ini</language>
+        <language tag="nl-NL">nl-NL/nl-NL.mod_genericcarousel.sys.ini</language>
+    </languages>
+    <help key="JHELP_EXTENSIONS_MODULE_MANAGER_CAROUSEL" />
+    <config>
+        <fields name="params">
+            <fieldset name="modules">
+                <field
+                    name="name1"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_IMAGE1_LABEL"
+                    description="MOD_CAROUSEL_FIELD_IMAGE1_DESC"/>
+                <field
+                    name="title1"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_CAPTION1_LABEL"
+                    description="MOD_CAROUSEL_FIELD_CAPTION1_DESC"/>
+                <field
+                    name="name2"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_IMAGE2_LABEL"
+                    description="MOD_CAROUSEL_FIELD_IMAGE2_DESC"/>
+                <field
+                    name="title2"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_CAPTION2_LABEL"
+                    description="MOD_CAROUSEL_FIELD_CAPTION2_DESC"/>
+                <field
+                    name="name3"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_IMAGE3_LABEL"
+                    description="MOD_CAROUSEL_FIELD_IMAGE3_DESC"/>
+                <field
+                    name="title3"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_CAPTION3_LABEL"
+                    description="MOD_CAROUSEL_FIELD_CAPTION3_DESC"/>
+                <field
+                    name="name4"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_IMAGE4_LABEL"
+                    description="MOD_CAROUSEL_FIELD_IMAGE4_DESC"/>
+                <field
+                    name="title4"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_CAPTION4_LABEL"
+                    description="MOD_CAROUSEL_FIELD_CAPTION4_DESC"/>
+                <field
+                    name="name5"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_IMAGE5_LABEL"
+                    description="MOD_CAROUSEL_FIELD_IMAGE5_DESC"/>
+                <field
+                    name="title5"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_CAPTION5_LABEL"
+                    description="MOD_CAROUSEL_FIELD_CAPTION5_DESC"/>
+                <field
+                    name="name6"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_IMAGE6_LABEL"
+                    description="MOD_CAROUSEL_FIELD_IMAGE6_DESC"/>
+                <field
+                    name="title6"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_CAPTION6_LABEL"
+                    description="MOD_CAROUSEL_FIELD_CAPTION6_DESC"/>
+                <field
+                    name="name7"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_IMAGE7_LABEL"
+                    description="MOD_CAROUSEL_FIELD_IMAGE7_DESC"/>
+                <field
+                    name="title7"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_CAPTION7_LABEL"
+                    description="MOD_CAROUSEL_FIELD_CAPTION7_DESC"/>
+                <field
+                    name="name8"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_IMAGE8_LABEL"
+                    description="MOD_CAROUSEL_FIELD_IMAGE8_DESC"/>
+                <field
+                    name="title8"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_CAPTION8_LABEL"
+                    description="MOD_CAROUSEL_FIELD_CAPTION8_DESC"/>
+                <field
+                    name="name9"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_IMAGE9_LABEL"
+                    description="MOD_CAROUSEL_FIELD_IMAGE9_DESC"/>
+                <field
+                    name="title9"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_CAPTION9_LABEL"
+                    description="MOD_CAROUSEL_FIELD_CAPTION9_DESC"/>
+                <field
+                    name="name10"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_IMAGE10_LABEL"
+                    description="MOD_CAROUSEL_FIELD_IMAGE10_DESC"/>
+                <field
+                    name="title10"
+                    type="text"
+                    label="MOD_CAROUSEL_FIELD_CAPTION10_LABEL"
+                    description="MOD_CAROUSEL_FIELD_CAPTION10_DESC"/>
+            </fieldset>
+            <fieldset name="general">
+                <field name="carousel_type"
+                type = "list"
+                label="MOD_CAROUSEL_FIELD_TYPE_LABEL"
+                description="MOD_CAROUSEL_FIELD_TYPE_DESC"
+                       default="O">
+                    <option value="O">MOD_CAROUSEL_ONE</option>
+                    <option value="I">MOD_CAROUSEL_IMAGES</option>
+                    <option value="L">MOD_CAROUSEL_LAZY</option>
+                </field>
+                <field name="nrOfItems"
+                type = "integer"
+                label="MOD_CAROUSEL_FIELD_ITEMS_LABEL"
+                description="MOD_CAROUSEL_FIELD_ITEMS_DESC"
+                       default="3" first="2" last="5" step="1"/>
+                <field name="scrollitems"
+                type = "integer"
+                label="MOD_CAROUSEL_FIELD_SCROLLITEMS_LABEL"
+                description="MOD_CAROUSEL_FIELD_SCROLLITEMS_DESC"
+                       default="3" first="2" last="5" step="1"/>
+                <field name="autoplay"
+                type = "radio"
+                class="btn-group"
+                label="MOD_CAROUSEL_FIELD_AUTOPLAY_LABEL"
+                description="MOD_CAROUSEL_FIELD_AUTOPLAY_DESC"
+                       default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="pauseonhover"
+                type = "radio"
+                class="btn-group"
+                label="MOD_CAROUSEL_FIELD_PAUSEHOVER_LABEL"
+                description="MOD_CAROUSEL_FIELD_PAUSEHOVER_DESC"
+                       default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="CarSpeed"
+                type = "integer"
+                label="MOD_CAROUSEL_FIELD_SPEED_LABEL"
+                description="MOD_CAROUSEL_FIELD_SPEED_DESC"
+                       default="3000" first="1000" last="10000" step="1000"/>
+                <field name="pagination"
+                type = "radio"
+                class="btn-group"
+                label="MOD_CAROUSEL_FIELD_PAGINATION_LABEL"
+                description="MOD_CAROUSEL_FIELD_PAGINATION_DESC"
+                       default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+
+                </field>
+                <field name="arrows"
+                type = "radio"
+                class="btn-group"
+                label="MOD_CAROUSEL_FIELD_ARROWS_LABEL"
+                description="MOD_CAROUSEL_FIELD_ARROWS_DESC"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+
+                </field>
+                <field name="centermode"
+                type = "radio"
+                class="btn-group"
+                label="MOD_CAROUSEL_FIELD_CENTERMODE_LABEL"
+                description="MOD_CAROUSEL_FIELD_CENTERMODE_DESC"
+                       default="0">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+
+                </field>
+                <field name="mycaption"
+                type = "radio"
+                class="btn-group"
+                label="MOD_CAROUSEL_FIELD_CAPTION_LABEL"
+                description="MOD_CAROUSEL_FIELD_CAPTION_DESC"
+                       default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+
+                </field>
+                <field name="add_jquery"
+                type = "radio"
+                class="btn-group"
+                label="MOD_CAROUSEL_FIELD_JQUERY_LABEL"
+                description="MOD_CAROUSEL_FIELD_JQUERY_DESC"
+                       default="1">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+
+                </field>
+            </fieldset>
+            <fieldset name="responsive">
+                <field
+                    name="breakpoint1"
+                    type="number"
+                    label="MOD_CAROUSEL_FIELD_BREAKPOINT1_LABEL"
+                    description="MOD_CAROUSEL_FIELD_BREAKPOINT1_DESC"/>
+                <field name="nrOfItemsBp1"
+                    type = "integer"
+                    label="MOD_CAROUSEL_FIELD_BREAKPOINT1_ITEMS_LABEL"
+                    description="MOD_CAROUSEL_FIELD_BREAKPOINT1_ITEMS_DESC"
+                    default="3" first="1" last="5" step="1"/>
+                <field name="scrollitemsBp1"
+                    type = "integer"
+                    label="MOD_CAROUSEL_FIELD_BREAKPOINT1_SCROLLITEMS_LABEL"
+                    description="MOD_CAROUSEL_FIELD_BREAKPOINT1_SCROLLITEMS_DESC"
+                    default="3" first="1" last="5" step="1"/>
+                <field
+                    name="breakpoint2"
+                    type="number"
+                    label="MOD_CAROUSEL_FIELD_BREAKPOINT2_LABEL"
+                    description="MOD_CAROUSEL_FIELD_BREAKPOINT2_DESC"/>
+                <field name="nrOfItemsBp2"
+                    type = "integer"
+                    label="MOD_CAROUSEL_FIELD_BREAKPOINT2_ITEMS_LABEL"
+                    description="MOD_CAROUSEL_FIELD_BREAKPOINT2_ITEMS_DESC"
+                    default="3" first="1" last="5" step="1"/>
+                <field name="scrollitemsBp2"
+                    type = "integer"
+                    label="MOD_CAROUSEL_FIELD_BREAKPOINT2_SCROLLITEMS_LABEL"
+                    description="MOD_CAROUSEL_FIELD_BREAKPOINT2_SCROLLITEMS_DESC"
+                    default="3" first="1" last="5" step="1"/>
+                <field
+                    name="breakpoint3"
+                    type="number"
+                    label="MOD_CAROUSEL_FIELD_BREAKPOINT3_LABEL"
+                    description="MOD_CAROUSEL_FIELD_BREAKPOINT3_DESC"/>
+                <field name="nrOfItemsBp3"
+                    type = "integer"
+                    label="MOD_CAROUSEL_FIELD_BREAKPOINT3_ITEMS_LABEL"
+                    description="MOD_CAROUSEL_FIELD_BREAKPOINT3_ITEMS_DESC"
+                    default="3" first="1" last="5" step="1"/>
+                <field name="scrollitemsBp3"
+                    type = "integer"
+                    label="MOD_CAROUSEL_FIELD_BREAKPOINT3_SCROLLITEMS_LABEL"
+                    description="MOD_CAROUSEL_FIELD_BREAKPOINT3_SCROLLITEMS_DESC"
+                    default="3" first="1" last="5" step="1"/>
+
+            </fieldset>
+
+            <fieldset
+                name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea" rows="3"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+                <field
+                    name="cache"
+                    type="list"
+                    default="0"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                        value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+    <!--
+    <updateservers>
+        <server type="extension" priority="1" name="mod_outsmartitcarousel">
+            http://www.outsmartit.be/updates/outsmartitcarousel.xml
+        </server>
+    </updateservers>
+    -->
+</extension>

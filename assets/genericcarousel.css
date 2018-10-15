@@ -1,7 +1,7 @@
 /*
-CSS styling for outsmartitcarousel
+CSS styling for genericcarousel
 */
-/* 
+/*
     Created on : Aug 15, 2015, 3:19:16 PM
     Author     : outsmartit
 */
@@ -15,7 +15,7 @@ CSS styling for outsmartitcarousel
     height: 2em;
     padding-top: 10px;
     background-color: rgba(128,128,128,0.7);
-    left : 0px;   
+    left : 0px;
     color: whitesmoke;
     bottom: 1px;
     text-align: center;
